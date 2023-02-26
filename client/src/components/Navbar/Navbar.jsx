@@ -4,6 +4,7 @@ import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link } from 'react-router-dom';
+import languageEn from "../../img/en.png";
 import "./Navbar.scss";
 
 export default function Navbar() {
@@ -13,7 +14,7 @@ export default function Navbar() {
         <nav className="header__navbar">
           <div className="header__navbar-left">
             <div className="item">
-              <img src="/img/en.png" alt="" />
+              <img src={languageEn} alt="" />
               <KeyboardArrowDownIcon />
             </div>
             <div className='item'>
@@ -21,17 +22,17 @@ export default function Navbar() {
               <KeyboardArrowDownIcon />
             </div>
             <div className="item">
-              <Link to="/products1">Women</Link>
+              <Link className="link" to="/products1">Women</Link>
             </div>
             <div className="item">
-              <Link to="/products2">Men</Link>
+              <Link className="link" to="/products2">Men</Link>
             </div>
             <div className="item">
-              <Link to="/products3">Children</Link>
+              <Link className="link" to="/products3">Children</Link>
             </div>
           </div>
           <div className="header__navbar-center">
-            <Link to="/">LAMASTORE</Link>
+            <Link className="link" to="/">LAMASTORE</Link>
           </div>
           <div className="header__navbar-right">
             <div className="item">
