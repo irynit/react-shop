@@ -1,22 +1,18 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
-import Product from './pages/Product/Product';
+import Product from "./pages/Product/Product";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import { Children } from 'react';
+import { Children } from "react";
 import "./App.scss";
 export function Layout() {
   return (
     <div className="app">
       <Navbar />
-<Footer/>
+      <Footer />
     </div>
-  )
+  );
 }
 
 const router = createBrowserRouter([
@@ -26,22 +22,19 @@ const router = createBrowserRouter([
     Children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "products/:id",
-        element: <Products />
+        element: <Products />,
       },
       {
         path: "product/:id",
-        element: <Product />
+        element: <Product />,
       },
-    ]
-  }
-]
-)
-
-
+    ],
+  },
+]);
 
 export default function App() {
   return (

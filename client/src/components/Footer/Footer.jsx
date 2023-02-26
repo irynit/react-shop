@@ -14,7 +14,7 @@ export default function Footer() {
             <span>New Arrivals</span>
           </div>
           <div className="footer__top-item">
-            <h3 className="footer__top-item-title">Links</h3> 
+            <h3 className="footer__top-item-title">Links</h3>
             <span>FAQ</span>
             <span>Pages</span>
             <span>Stores</span>
@@ -25,15 +25,20 @@ export default function Footer() {
         <div className="footer__row">
           <div className="footer__row-item">
             <h3 className="footer__row-title">About</h3>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure eos asperiores error?
-              Qui ea, labore corrupti repellat minima illo cumque!</span>
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure eos
+              asperiores error? Qui ea, labore corrupti repellat minima illo
+              cumque!
+            </span>
           </div>
           <div className="footer__row-item">
             <h3 className="footer__row-title">Contact</h3>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure eos asperiores error?
-              Qui ea, labore corrupti repellat minima illo cumque!</span>
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure eos
+              asperiores error? Qui ea, labore corrupti repellat minima illo
+              cumque!
+            </span>
           </div>
-          
         </div>
         <div className="footer__botton">
           <div className="footer__botton-left">
@@ -48,5 +53,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
