@@ -6,6 +6,7 @@ import pexelsImg from "../../img/pexels.jpeg";
 import pexels2Img from "../../img/pexels2.webp";
 import pexels3Img from "../../img/pexels3.jpeg";
 import "./Slider.scss";
+
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -39,4 +40,3 @@ export default function Slider() {
     </div>
   );
 }
-
