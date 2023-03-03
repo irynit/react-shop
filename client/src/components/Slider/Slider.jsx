@@ -20,7 +20,7 @@ export default function Slider() {
   };
 
   return (
-    <div className="slider">
+    <section className="slider">
       <div
         className="container slider__container"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
@@ -37,6 +37,6 @@ export default function Slider() {
           <EastOutlinedIcon />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

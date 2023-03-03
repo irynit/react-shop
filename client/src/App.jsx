@@ -12,7 +12,7 @@ export function Layout() {
     <div className="app">
       <Navbar />
 
-      <Slider/>
+      <Slider />
       <Footer />
     </div>
   );
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <div>
+    <div className="wrapper">
       <RouterProvider router={router} />
     </div>
   );
