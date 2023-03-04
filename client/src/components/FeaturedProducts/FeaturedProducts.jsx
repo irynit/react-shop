@@ -1,7 +1,7 @@
 import Card from "../Card/Card";
 import "./FeaturedProducts.scss";
 
-export default function FeaturedProducts(type) {
+export default function FeaturedProducts({ type }) {
   const data = [
     {
       id: 1,
@@ -24,6 +24,7 @@ export default function FeaturedProducts(type) {
       id: 3,
       img: "https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg?auto=compress&cs=tinysrgb&w=1600",
       title: "Skirt",
+      isNew: false,
       oldPrice: 19,
       price: 12,
     },
@@ -31,17 +32,20 @@ export default function FeaturedProducts(type) {
       id: 4,
       img: "https://images.pexels.com/photos/2065200/pexels-photo-2065200.jpeg?auto=compress&cs=tinysrgb&w=1600",
       title: "Hat",
+      isNew: false,
       oldPrice: 19,
       price: 12,
     },
   ];
 
+  let newCard = data.map((item) => <Card item={item} key={item.id} />);
+
   return (
     <section className="featured">
       <div className="container featured__container">
         <div className="featured__top">
-          <h1 className="featured__title">{type} products</h1>
-          <p className="featured__text">
+          <h1 className="featured__top-title">{type} products</h1>
+          <p className="featured__top-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
             ducimus, perspiciatis quam non laudantium debitis eum illum quisquam
             fugit dolorem, alias inventore modi repellendus nisi quaerat natus
@@ -50,9 +54,7 @@ export default function FeaturedProducts(type) {
             provident animi excepturi minima maiores.
           </p>
         </div>
-        <div className="featured__bottom">
-          <Card />
-        </div>
+        <div className="featured__bottom">{newCard}</div>
       </div>
     </section>
   );
