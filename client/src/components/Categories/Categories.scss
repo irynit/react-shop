@@ -1,0 +1,34 @@
+.categories {
+  &__container{
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    height: 80vh;
+  }
+
+&__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  &-row {
+    flex: 1;
+    display: flex;
+    
+    gap: 10px;
+  }
+}
+&__col-l{
+  flex: 2;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+&-row{
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+}
+
+
+}
+}
