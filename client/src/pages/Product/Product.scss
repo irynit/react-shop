@@ -1,0 +1,37 @@
+.product { 
+  padding: 20px 50px;
+  display: flex;
+  gap: 50px;
+  &__container{
+  //   padding: 20px 50px;
+  // display: flex;
+  // gap: 50px;
+  }
+  &__left {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+
+    &-images {
+      flex: 1;
+      img {
+        width: 100px;
+        height: 150px;
+        object-fit: cover;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+    }
+    &-row {
+      flex: 5;
+      img {
+        width: 100px;
+        max-height: 800px;
+       
+      }
+    }
+  }
+  &__rigxt {
+    flex: 1;
+  }
+}
