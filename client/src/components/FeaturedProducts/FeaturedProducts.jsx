@@ -1,5 +1,7 @@
 import Card from "../Card/Card";
+import axios from "axios";
 import "./FeaturedProducts.scss";
+import { useEffect, useState } from "react";
 
 export default function FeaturedProducts({ type }) {
   const data = [
@@ -39,6 +41,27 @@ export default function FeaturedProducts({ type }) {
   ];
 
   let newCard = data.map((item) => <Card item={item} key={item.id} />);
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await axios.get(
+          process.env.REACT_APP_API_URL + "/products",
+          {
+            headers: {
+              Authorization: "bearer" + process.env.REACT_APP_API_TOKEN,
+            },
+          }
+        );
+        console.log(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <section className="featured">

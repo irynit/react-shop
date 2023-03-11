@@ -6,8 +6,12 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
 import languageEn from "../../img/en.png";
 import "./Navbar.scss";
+import { useState } from "react";
+import Cart from '../Cart/Cart';
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="header">
       <div className="container header__container">
@@ -67,13 +71,14 @@ export default function Navbar() {
               <SearchIcon />
               <PersonOutlinedIcon />
               <FavoriteBorderOutlinedIcon />
-              <div className="cartIcon">
+              <div className="cartIcon" onClick={()=>setOpen(!open)}>
                 <ShoppingCartOutlinedIcon />
                 <span>0</span>
               </div>
             </div>
           </div>
         </nav>
+        {open && <Cart />}
       </div>
     </header>
   );

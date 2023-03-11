@@ -6,6 +6,8 @@ import Product from "./pages/Product/Product";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import "./App.scss";
+import "./reset.scss"
+
 export function Layout() {
   return (
     <div className="app">

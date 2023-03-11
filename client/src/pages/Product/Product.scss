@@ -94,7 +94,7 @@
       font-size: 14px;
       margin-top: 30px;
     }
-    hr {
+    & hr {
       width: 200px;
     }
     &-detalis {
@@ -103,9 +103,8 @@
       gap: 10px;
       color: gray;
       font-size: 14px;
-      hr {
+      & hr {
         width: 200px;
-
         border: 1px solid rgb(238, 237, 237);
       }
     }
