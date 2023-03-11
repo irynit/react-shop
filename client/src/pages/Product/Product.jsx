@@ -4,6 +4,7 @@ import { useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import BalanceIcon from "@mui/icons-material/Balance";
+
 export default function Product() {
   const [selectedImg, setSelectedImg] = useState(0);
   const [quantity, setOuantity] = useState(1);
@@ -23,9 +24,9 @@ export default function Product() {
             <img src={images[selectedImg]} alt="" />
           </div>
         </div>
-        < div className="product__right">
+        <div className="product__right">
           <h2 className="product__right-title">Title</h2>
-          <span>$199</span>
+          <span className="product__right-price">$199</span>
           <p className="product__right-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quo
             nisi totam assumenda asperiores, odit a voluptas aperiam velit
@@ -44,32 +45,30 @@ export default function Product() {
           <button className="product__right-add">
             <AddShoppingCartIcon /> ADD TO CART
           </button>
-          <div className="product__right-link">
-            <div className="product__right-link-item">
+          <div className="product__right-links">
+            <div className="product__right-links-item">
               <FavoriteBorderIcon />
               ADD TO WISH LIST
             </div>
-            <div className="product__right-link-item">
+            <div className="product__right-links-item">
               <BalanceIcon /> ADD TO COMPARE
             </div>
           </div>
           <div className="product__right-info">
             <span>Vendor: Polo</span>
-              <span>Product Type: T-Shirt</span>
-              <span>Tag: T-Shirt, Women, Top</span>
-            </div>
-            <hr />
-            <div className="product__right-details">
-              <span>DESCRIPTION</span>
-              <hr />
-              <span>ADDITIONAL INFORMATION</span>
-              <hr />
-              <span>FAQ</span>
-            </div>
-          
+            <span>Product Type: T-Shirt</span>
+            <span>Tag: T-Shirt, Women, Top</span>
           </div>
-      
-    </div>
+          <hr />
+          <div className="product__right-detalis">
+            <span>DESCRIPTION</span>
+            <hr />
+            <span>ADDITIONAL INFORMATION</span>
+            <hr />
+            <span>FAQ</span>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
