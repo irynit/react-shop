@@ -48,10 +48,10 @@
     h3 {
       font-size: 18px;
       font-weight: 500;
-      &:first-child {
+    }
+    &-sale {
         text-decoration: line-through;
         color: gray;
       }
-    }
   }
 }
