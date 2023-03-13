@@ -12,7 +12,7 @@ export default function List({ subCategories, maxPrice, sort, categoryId }) {
   return (
     <section className="list">
       {loading
-        ? "loading"
+        ? <div className="list__loading"></div>
         : data?.map((item) => <Card item={item} key={item.id} />)}
     </section>
   );

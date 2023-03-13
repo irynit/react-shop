@@ -7,7 +7,7 @@ import useFetch from "../../hooks/useFetch";
 export default function Products() {
   const categoryId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(1000);
-  const [sort, setSort] = useState(null);
+  const [sort, setSort] = useState("asc");
   const [selectedSubCategory, setSelectedSubCategory] = useState([]);
   const { data, loading, error } = useFetch(
     `/sub-categories?[filters][categories][id][$eq]=${categoryId}`
@@ -81,7 +81,6 @@ export default function Products() {
         <div className="products__right">
           <div className="products__right-img">
             <img
-              className="catImg"
               src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
               alt=""
             />
