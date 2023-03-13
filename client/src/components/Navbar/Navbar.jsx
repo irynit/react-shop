@@ -26,17 +26,17 @@ export default function Navbar() {
               <KeyboardArrowDownIcon />
             </div>
             <div className="header__navbar-left-item">
-              <Link className="link" to="/products1">
+              <Link className="link" to="/products/1">
                 Women
               </Link>
             </div>
             <div className="header__navbar-left-item">
-              <Link className="link" to="/products2">
+              <Link className="link" to="/products/2">
                 Men
               </Link>
             </div>
             <div className="header__navbar-left-item">
-              <Link className="link" to="/products3">
+              <Link className="link" to="/products/3">
                 Children
               </Link>
             </div>

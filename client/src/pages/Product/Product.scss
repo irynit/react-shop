@@ -37,7 +37,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 22px;
 
     &-price {
       font-size: 30px;
@@ -101,7 +101,7 @@
     &-detalis {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 5px;
       color: gray;
       font-size: 14px;
       & hr {
