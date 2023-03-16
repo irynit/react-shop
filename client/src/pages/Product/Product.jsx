@@ -4,14 +4,18 @@ import { useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import BalanceIcon from "@mui/icons-material/Balance";
-import { useParams } from 'react-router-dom';
-import useFetch from '../../hooks/useFetch';
-
+import { useParams } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
 export default function Product() {
   const id = useParams().id;
   const [selectedImg, setSelectedImg] = useState("img");
   const [quantity, setOuantity] = useState(1);
+  const dispatch = useDispatch();
+
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
+
   return (
     <section className="product">
       <div className="container product__container">
@@ -31,7 +35,8 @@ export default function Product() {
                 />
                 <img
                   src={
-                    process.env.REACT_APP_UPLOAD_URL +data?.attributes?.img2?.data?.attributes?.url
+                    process.env.REACT_APP_UPLOAD_URL +
+                    data?.attributes?.img2?.data?.attributes?.url
                   }
                   alt=""
                   onClick={(e) => setSelectedImg("img2")}
@@ -40,20 +45,23 @@ export default function Product() {
               <div className="product__left-row">
                 <img
                   src={
-                    process.env.REACT_APP_UPLOAD_URL +data?.attributes [selectedImg]?.data?.attributes?.url
+                    process.env.REACT_APP_UPLOAD_URL +
+                    data?.attributes[selectedImg]?.data?.attributes?.url
                   }
                   alt=""
                 />
               </div>
             </div>
             <div className="product__right">
-              <h2 className="product__right-title"> {data?.attributes?.title} </h2>
-              <span className="product__right-price">$ {data?.attributes?.price} </span>
-              <p className="product__right-text">{data?.attributes?.description}
-                {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-                quo nisi totam assumenda asperiores, odit a voluptas aperiam
-                velit expedita necessitatibus aliquid accusamus quibusdam alias
-                dolorum beatae nam adipisci qui. */}
+              <h2 className="product__right-title">
+                {" "}
+                {data?.attributes?.title}{" "}
+              </h2>
+              <span className="product__right-price">
+                $ {data?.attributes?.price}{" "}
+              </span>
+              <p className="product__right-text">
+                {data?.attributes?.description}
               </p>
               <div className="product__right-quantity">
                 <button
@@ -68,7 +76,20 @@ export default function Product() {
                   +
                 </button>
               </div>
-              <button className="product__right-add">
+              <button
+                className="product__right-add"
+                onClick={() =>
+                  dispatch(
+                    addToCart({
+                      id: data.id,
+                      title: data.attributes.title,
+                      description: data.attributes.description,
+                      price: data.attributes.price,
+                      img: data.attributes.img.data.attributes.url,
+                    })
+                  )
+                }
+              >
                 <AddShoppingCartIcon /> ADD TO CART
               </button>
               <div className="product__right-links">
@@ -99,5 +120,4 @@ export default function Product() {
       </div>
     </section>
   );
-  };
-
+}

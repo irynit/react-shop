@@ -3,6 +3,7 @@ import "./Products.scss";
 import List from "../../components/List/List";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import Banner from "./Banner";
 
 export default function Products() {
   const categoryId = parseInt(useParams().id);
@@ -12,6 +13,8 @@ export default function Products() {
   const { data, loading, error } = useFetch(
     `/sub-categories?[filters][categories][id][$eq]=${categoryId}`
   );
+
+  // console.log(data);
 
   const handleChange = (e) => {
     const categoryValue = e.target.value;

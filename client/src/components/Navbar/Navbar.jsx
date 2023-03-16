@@ -5,12 +5,17 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
 import languageEn from "../../img/en.png";
-import "./Navbar.scss";
 import { useState } from "react";
-import Cart from '../Cart/Cart';
+import Cart from "../Cart/Cart";
+import { useSelector } from "react-redux";
+import useFetch from "../../hooks/useFetch";
+import "./Navbar.scss";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const products = useSelector((state) => state.cart.products);
+  const { data, loading, error } = useFetch(`/categories`);
+  // console.log(data);
 
   return (
     <header className="header">
@@ -25,21 +30,13 @@ export default function Navbar() {
               <span>USD</span>
               <KeyboardArrowDownIcon />
             </div>
-            <div className="header__navbar-left-item">
-              <Link className="link" to="/products/1">
-                Women
-              </Link>
-            </div>
-            <div className="header__navbar-left-item">
-              <Link className="link" to="/products/2">
-                Men
-              </Link>
-            </div>
-            <div className="header__navbar-left-item">
-              <Link className="link" to="/products/3">
-                Children
-              </Link>
-            </div>
+            {data?.map((item) => (
+              <div className="header__navbar-left-item" key={item.id}>
+                <Link className="link" to={`/products/${item.id}`}>
+                  {item.attributes.title}
+                </Link>
+              </div>
+            ))}
           </div>
 
           <div className="header__navbar-center">
@@ -77,7 +74,7 @@ export default function Navbar() {
                 onClick={() => setOpen(!open)}
               >
                 <ShoppingCartOutlinedIcon />
-                <span>0</span>
+                {/* <span>{products.length}</span> */}
               </div>
             </div>
           </div>
