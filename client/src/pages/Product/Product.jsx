@@ -114,7 +114,7 @@ export default function Product() {
                   ""
                 ) : (
                   <div className="product__right-detalis-description">
-                    ${item?.attributes.description}
+                    ${data?.attributes.description}
                   </div>
                 )}
                 <hr />
