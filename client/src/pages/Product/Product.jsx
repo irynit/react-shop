@@ -110,7 +110,7 @@ export default function Product() {
               <hr />
               <div className="product__right-detalis">
                 <span>DESCRIPTION</span>
-                {item?.attributes.description === null ? (
+                {data?.attributes.description === null ? (
                   ""
                 ) : (
                   <div className="product__right-detalis-description">
