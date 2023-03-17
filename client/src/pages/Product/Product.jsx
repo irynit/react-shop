@@ -86,7 +86,7 @@ export default function Product() {
                       description: data.attributes.description,
                       price: data.attributes.price,
                       img: data.attributes.img.data.attributes.url,
-                      quantity
+                      quantity,
                     })
                   )
                 }
@@ -110,6 +110,13 @@ export default function Product() {
               <hr />
               <div className="product__right-detalis">
                 <span>DESCRIPTION</span>
+                {item?.attributes.description === null ? (
+                  ""
+                ) : (
+                  <div className="product__right-detalis-description">
+                    ${item?.attributes.description}
+                  </div>
+                )}
                 <hr />
                 <span>ADDITIONAL INFORMATION</span>
                 <hr />
