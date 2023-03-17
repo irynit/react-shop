@@ -74,7 +74,7 @@ export default function Navbar() {
                 onClick={() => setOpen(!open)}
               >
                 <ShoppingCartOutlinedIcon />
-                {/* <span>{products.length}</span> */}
+                <span>{products.length}</span>
               </div>
             </div>
           </div>

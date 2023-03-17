@@ -86,6 +86,7 @@ export default function Product() {
                       description: data.attributes.description,
                       price: data.attributes.price,
                       img: data.attributes.img.data.attributes.url,
+                      quantity
                     })
                   )
                 }

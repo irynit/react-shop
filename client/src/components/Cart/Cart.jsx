@@ -1,20 +1,24 @@
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import "./Cart.scss";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { removeItem, resetCart } from "../../redux/cartReducer";
+import "./Cart.scss";
 
 export default function Cart() {
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
 
-  const totalPrice = () => {
+  function totalPrice() {
     let total = 0;
+    // console.log("total " + total);
     products.forEach((item) => {
+      // console.log("quantity: " + item.quantity);
+      // console.log("price: " + item.price);
       total += item.quantity * item.price;
+      // console.log("new total: " + total);
     });
     return total.toFixed(2);
-  };
+  }
 
   return (
     <div className="cart">
