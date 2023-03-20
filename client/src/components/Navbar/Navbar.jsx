@@ -66,9 +66,9 @@ export default function Navbar() {
               </Link>
             </div>
             <div className="header__navbar-right-icons">
-              <SearchIcon />
+              {/* <SearchIcon />
               <PersonOutlinedIcon />
-              <FavoriteBorderOutlinedIcon />
+              <FavoriteBorderOutlinedIcon /> */}
               <div
                 className="header__navbar-right-icons-cart"
                 onClick={() => setOpen(!open)}

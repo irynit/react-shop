@@ -93,7 +93,7 @@ export default function Product() {
               >
                 <AddShoppingCartIcon /> ADD TO CART
               </button>
-              <div className="product__right-links">
+              {/* <div className="product__right-links">
                 <div className="product__right-links-item">
                   <FavoriteBorderIcon />
                   ADD TO WISH LIST
@@ -101,7 +101,7 @@ export default function Product() {
                 <div className="product__right-links-item">
                   <BalanceIcon /> ADD TO COMPARE
                 </div>
-              </div>
+              </div> */}
               <div className="product__right-info">
                 <span>Vendor: Polo</span>
                 <span>Product Type: T-Shirt</span>
