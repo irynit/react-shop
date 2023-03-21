@@ -12,7 +12,7 @@ export default function Contact() {
         <div className="contact__mail">
           <form name="contact" method="POST" data-netlify="true">
             <input type="text" placeholder="Enter your e-mail..." />
-            <button>JOIN US</button>
+            <button type="submit">JOIN US</button>
           </form>
         </div>
         <div className="contact__icons">
