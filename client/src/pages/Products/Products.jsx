@@ -46,11 +46,12 @@ export default function Products() {
             <div className="products__left-filter-item">
               <h2>Filter by price</h2>
               <div className="products__left-filter-item-input">
-                <span>1000</span>
+                <span>0</span>
                 <input
                   type="range"
                   min={0}
                   max={1000}
+                  value={1000}
                   onChange={(e) => setMaxPrice(e.target.value)}
                 />
                 <span>{maxPrice}</span>

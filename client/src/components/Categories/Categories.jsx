@@ -6,7 +6,7 @@ export default function Categories() {
       <div className="container categories__container">
         <div className="categories__col">
           <div className="categories__col-row">
-            <img 
+            <img
               src="https://images.pexels.com/photos/818992/pexels-photo-818992.jpeg?auto=compress&cs=tinysrgb&w=1600"
               alt=""
             />
@@ -51,7 +51,7 @@ export default function Categories() {
                   alt=""
                 />
                 <button>
-                  <Link to="/products/1" className="link">
+                  <Link to="/products/2" className="link">
                     Men
                   </Link>
                 </button>
