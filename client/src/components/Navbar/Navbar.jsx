@@ -41,7 +41,7 @@ export default function Navbar() {
 
           <div className="header__navbar-center">
             <Link className="link" to="/">
-              LAMASTORE
+              Examstore
             </Link>
           </div>
           <div className="header__navbar-right">
