@@ -84,8 +84,7 @@ export default function Products() {
         <div className="products__right">
           <div className="products__right-img">
             <img
-              src={<Banner catId={categoryId}/>}
-              // src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
               alt=""
             />
           </div>
