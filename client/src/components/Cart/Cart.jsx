@@ -49,7 +49,7 @@ export default function Cart() {
             {/* process.env.REACT_APP_UPLOAD_URL + */}
             <div className="cart__item-details">
               <h2>{item.title}</h2>
-              <p>{item.description?.substring(0, 99)}</p>
+              <p>{item.description?.substring(0, 25)}</p>
               <div className="cart__item-price">
                 {item.quantity} x $ {item.price}{" "}
               </div>
