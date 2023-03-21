@@ -27,7 +27,7 @@ export default function Product() {
               <div className="product__left-images">
                 <img
                   src={
-                    process.env.REACT_APP_UPLOAD_URL +
+                    // process.env.REACT_APP_UPLOAD_URL +
                     data?.attributes?.img?.data?.attributes?.url
                   }
                   alt=""
@@ -35,7 +35,7 @@ export default function Product() {
                 />
                 <img
                   src={
-                    process.env.REACT_APP_UPLOAD_URL +
+                    // process.env.REACT_APP_UPLOAD_URL +
                     data?.attributes?.img2?.data?.attributes?.url
                   }
                   alt=""
@@ -45,7 +45,7 @@ export default function Product() {
               <div className="product__left-row">
                 <img
                   src={
-                    process.env.REACT_APP_UPLOAD_URL +
+                    // process.env.REACT_APP_UPLOAD_URL +
                     data?.attributes[selectedImg]?.data?.attributes?.url
                   }
                   alt=""

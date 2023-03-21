@@ -45,7 +45,8 @@ export default function Cart() {
         <h2 className="cart__title">Produts in your cart</h2>
         {products?.map((item) => (
           <div className="cart__item" key={item.id}>
-            <img src={process.env.REACT_APP_UPLOAD_URL + item.img} alt="" />
+            <img src={item.img} alt="" />
+            {/* process.env.REACT_APP_UPLOAD_URL + */}
             <div className="cart__item-details">
               <h2>{item.title}</h2>
               <p>{item.description?.substring(0, 99)}</p>
