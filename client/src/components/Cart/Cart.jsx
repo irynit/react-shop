@@ -35,6 +35,7 @@ export default function Cart() {
       await stripe.redirectToCheckout({
         sessionId: res.data.stripeSession.id,
       });
+      resetCart();
     } catch (err) {
       console.log(err);
     }
