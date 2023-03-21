@@ -46,7 +46,7 @@ export default function Products() {
             <div className="products__left-filter-item">
               <h2>Filter by price</h2>
               <div className="products__left-filter-item-input">
-                <span>0</span>
+                <span>1000</span>
                 <input
                   type="range"
                   min={0}
