@@ -65,7 +65,7 @@ export default function Cart() {
           <span>SUBTOTAL</span>
           <span>$ {totalPrice()} </span>
         </div>
-        <button onClick={(handlePayment, () => dispatch(resetCart()))}>
+        <button onClick={(handlePayment)}>
           PROSEED TO CHECKOUT
         </button>
         <span className="cart__reset" onClick={() => dispatch(resetCart())}>
