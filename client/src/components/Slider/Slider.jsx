@@ -7,17 +7,11 @@ import pexels2Img from "../../img/pexels2.webp";
 import pexels3Img from "../../img/pexels3.jpeg";
 
 import "./Slider.scss";
-import { json } from "react-router-dom";
 
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const sliderArr = [pexelsImg, pexels2Img, pexels3Img];
-
-  const newSliderArr = sliderArr.map((item) => {
-    console.log(item.image);
-    <img src={item.image} key={item.id} alt="" />;
-  });
 
   const prevSlide = () => {
     return setCurrentSlide(currentSlide === 0 ? 2 : (prev) => prev - 1);

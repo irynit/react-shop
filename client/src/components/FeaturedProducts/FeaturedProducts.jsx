@@ -26,7 +26,9 @@ export default function FeaturedProducts({ type }) {
             ? "Something went wrong"
             : loading
             ? "loading"
-            : data?.map((item) => <Card item={item} key={item.id} />)}
+            : data
+                ?.slice(0, 4)
+                .map((item) => <Card item={item} key={item.id} />)}
         </div>
       </div>
     </section>
