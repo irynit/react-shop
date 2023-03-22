@@ -16,10 +16,12 @@
       color: gray;
     }
   }
-  &__bottom{
-    width: 1200px;
+  &__bottom {
+    width: 1300px;
     display: flex;
     justify-content: center;
     gap: 50px;
+    overflow-x: scroll;
+    padding-bottom: 25px;
   }
 }
