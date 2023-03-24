@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Banner from "./Banner";
 
-export default function Products() {
+export default function Products(catId) {
   const categoryId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState("asc");
@@ -14,7 +14,7 @@ export default function Products() {
     `/sub-categories?[filters][categories][id][$eq]=${categoryId}`
   );
 
-  // console.log(data);
+  // console.log(categoryId);
 
   const handleChange = (e) => {
     const categoryValue = e.target.value;
@@ -83,10 +83,11 @@ export default function Products() {
         </div>
         <div className="products__right">
           <div className="products__right-img">
-            <img
+            <Banner catId={categoryId}/>
+            {/* <img
               src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
               alt=""
-            />
+            /> */}
           </div>
           <List
             categoryId={categoryId}

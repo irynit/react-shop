@@ -9,6 +9,8 @@ export default function List({ subCategories, maxPrice, sort, categoryId }) {
     )}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
   );
 
+  // console.log(data);
+
   return (
     <section className="list">
       {loading
