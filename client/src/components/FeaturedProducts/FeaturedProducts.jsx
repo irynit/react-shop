@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 
 export default function FeaturedProducts({ type }) {
   const { data, loading, error } = useFetch(
-    `/products?populate=*&[filters][type][$eq]=${type}`
+    `/products?populate=*&[filters][type][$eq]=${type}&sort=createdAt:desc`
   );
 
   return (
@@ -26,7 +26,7 @@ export default function FeaturedProducts({ type }) {
             ? "Something went wrong"
             : loading
             ? "loading"
-            : data?.map((item) => <Card item={item} key={item.id} />)}
+            : data?.slice(0,4).map((item) => <Card item={item} key={item.id} />)}
         </div>
       </div>
     </section>
