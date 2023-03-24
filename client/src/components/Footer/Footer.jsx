@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
         <div className="footer__bottom">
           <div className="footer__bottom-left">
-            <span className="footer__bottom-left-logo">Lamastore</span>
+            <span className="footer__bottom-left-logo">Examstore</span>
             <span className="footer__bottom-left-copyright">
               Copyright 2023. All Rights Reserved
             </span>
