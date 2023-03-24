@@ -24,11 +24,13 @@ export default function Navbar() {
           <div className="header__navbar-left">
             <div className="header__navbar-left-item">
               <img src={languageEn} alt="" />
-              <KeyboardArrowDownIcon />
+              {/* TODO: add language change support
+              <KeyboardArrowDownIcon /> */}
             </div>
             <div className="header__navbar-left-item">
               <span>USD</span>
-              <KeyboardArrowDownIcon />
+              {/* TODO: add currency change support
+              <KeyboardArrowDownIcon /> */}
             </div>
             {data?.map((item) => (
               <div className="header__navbar-left-item" key={item.id}>
